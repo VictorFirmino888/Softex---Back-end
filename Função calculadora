@@ -1,0 +1,42 @@
+var N1,N2,OP, Calculadora
+const input= require("readline-sync");
+N1 = input.questionInt('Informe o primeiro numero da operação ');
+N2 = input.questionInt('Informe o segundo numero da operação ');
+OP = input.questionInt(['Informe qual operação deseja realizar sendo elas:','' + '\n' +
+'','1 = Soma','' + '\n' +
+'','2 = Subtração','' + '\n' +
+'','3 = Multiplicação','' + '\n' +
+'','4 = Divisão','' + '\n' +
+''].join(''));
+
+// Função calculadora
+function Calculadora(N1, N2, OP) {
+    switch (OP) {
+      case 1: 
+        alert("Você escolhe a opção Soma.")
+        alert("O resultado é: ") 
+        return N1 + N2;
+        break;
+      case 2:
+        alert("Você escolhe a opção Subtração.")
+        alert("O resultado é: ")           
+        return N1 - N2;
+        break;
+      case 3:
+        alert("Você escolhe a opção Multiplicação.")
+        alert("O resultado é: ")           
+        return N1 * N2;
+        break;
+      case 4:
+        alert("Você escolhe a opção Divisão.")
+        alert("O resultado é: ")           
+        return N1 / N2;
+        break;
+        
+      default:
+      alert("A opção digitada é invalida, digite uma opção valida!")
+        return "  0  ";
+    }
+    
+  }
+console.log(Calculadora(N1,N2,OP));
