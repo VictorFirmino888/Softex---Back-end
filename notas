@@ -1,0 +1,20 @@
+const prompt = require('prompt-sync')();
+var n1, n2, n3, media, status,retorno
+
+n1 = parseFloat(prompt('Digite o valor da primeira nota: '));
+n2 = parseFloat(prompt('Digite o valor da segunda nota: '));
+n3 = parseFloat(prompt('Digite o valor da terceira nota: '));
+media = (n1 + n2 + n3)/3
+if (media >= 7.0){
+    var status = 'APROVADO'
+}else{
+    var status = 'REPROVADO'
+}
+
+console.log(`A média do aluno foi de ${media} então o aluno está ${status}`)
+
+
+n1 = parseFloat(prompt('Digite o valor da primeira nota: '));
+n2 = parseFloat(prompt('Digite o valor da segunda nota: '));
+retorno = (n1 + n2) - 21
+console.log(`A nota minima necessária para ser aprovado é de ${Math.abs(retorno)}`)
